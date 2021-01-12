@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'perfil/style.css' %}">
+
+    <title>Team Member Profile Card</title>
+</head>
+
+<body>
+    <div class="card">
+        <section class="main">
+            <p class="name">Jose A. Cortes Ayala</p>
+            <p class="titulo_trabajo">Desarrollo web python </p>
+            <p>Diseño UX/UI </p>
+        </section>
+
+        <section class="more">
+            <p>Descubre más sobre mi </p>
+            <div class="social-links">
+                <p class="label_social ">Trabajos</p>
+                <a href="{% url 'trabajos' %}" class="facebook">
+                    <i class="fas fa-portrait"></i>
+                </a>
+                <p class="label_social ">Estudios</p>
+                <a href="{% url 'estudios' %}" class="facebook">
+                    <i class="fas fa-user-graduate"></i>
+                </a>
+                <!-- 
+                <a href="#" class="github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a> -->
+          
+            </div>
+        </section>
+
+        <section class="info">
+            <section>
+                <p class="contactanos_titulo"> Correo </p>
+                <p>joalcoay94@gmail.com</p>
+            </section>
+            <section>
+                <p>Teléfono </p>
+                <p>5541173826</p>
+            </section>
+            
+          
+            <button id="openerBtn">
+                <i class="fas fa-plus"></i>
+                <i class="fas fa-minus"></i>
+            </button>
+        </section>
+    </div>
+
+</body>
+
+<script>
+    var buttonEl = document.getElementById('openerBtn');
+    var cardEl = document.querySelector('.card');
+
+    buttonEl.addEventListener('click', function() {
+        cardEl.classList.toggle('opened');
+    })
+</script>
+
+</html>
