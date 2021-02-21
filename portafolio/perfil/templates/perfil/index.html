@@ -12,63 +12,61 @@
     <title>Team Member Profile Card</title>
 </head>
 
-<body>
-    <div class="card">
-        <section class="main">
-            <p class="name">Jose A. Cortes Ayala</p>
-            <p class="titulo_trabajo">Desarrollo web python </p>
-            <p>Diseño UX/UI </p>
-        </section>
 
-        <section class="more">
-            <p>Descubre más sobre mi </p>
-            <div class="social-links">
-                <p class="label_social ">Trabajos</p>
-                <a href="{% url 'trabajos' %}" class="facebook">
-                    <i class="fas fa-portrait"></i>
-                </a>
-                <p class="label_social ">Estudios</p>
-                <a href="{% url 'estudios' %}" class="facebook">
-                    <i class="fas fa-user-graduate"></i>
-                </a>
-                <!-- 
-                <a href="#" class="github">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="linkedin">
-                    <i class="fab fa-linkedin-in"></i>
-                </a> -->
-          
-            </div>
-        </section>
+   <body>
+       <section class="menu">
+           <a href="" class="menu-item" id="about"> <i class="fas fa-user"></i> About       </a>
+           <a href="" class="menu-item" id="about"> <i class="fas fa-feather-alt"></i> Skills       </a>
+           <a href="" class="menu-item" id="about"> <i class="fas fa-list-alt"></i> Resume      </a>
+           <a href="" class="menu-item" id="about"> <i class="fas fa-tasks"></i> Works       </a>
+       </section>
 
-        <section class="info">
-            <section>
-                <p class="contactanos_titulo"> Correo </p>
-                <p>joalcoay94@gmail.com</p>
-            </section>
-            <section>
-                <p>Teléfono </p>
-                <p>5541173826</p>
-            </section>
-            
-          
-            <button id="openerBtn">
-                <i class="fas fa-plus"></i>
-                <i class="fas fa-minus"></i>
-            </button>
-        </section>
-    </div>
+       <section class="profile">
+           <div class="img-container"></div>
+           <div class="profile-body">
+               <p class="name">Jose Alberto</p>
+               <div class="sociales">
+                   <a href=""><i class="fab fa-facebook-f"></i></a>
+                   <a href=""><i class="fab fa-linkedin-in"></i></a>
+                   <a href=""><i class="fab fa-github"></i></a>
+               </div>
+              
+           </div>
+           <div class="actions">
+            <button>Download CV</button>
+            <button>Contact me</button>
+        </div>
 
-</body>
+       </section>
 
-<script>
-    var buttonEl = document.getElementById('openerBtn');
-    var cardEl = document.querySelector('.card');
+       <section class="main">
+           <section class="asst split about" id="about-section">
+               <p class="title section-item"><span>About</span> me</p>
+               <div class="asset-body">
+                   <div class="section-item">
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ducimus mollitia cupiditate odit? Tempore vel aperiam reprehenderit vero 
+                        debitis eius, similique, nostrum voluptates illum architecto earum
+                        consequatur dolor atque error reiciendis?</p>
+                   </div>
+                   <div class="section-item">
+                       <div class="item">
+                           <label for="">Age <span>......</span></label>
+                           <p class="value">36</p>
+                       </div>
+                       <div class="item">
+                           <label for="">Country <span>......</span></label>
+                           <p class="value">Mexico</p>
+                       </div>
+                       <div class="item">
+                           <label for="">Remote <span>......</span></label>
+                           <p class="value">Avalable</p>
+                       </div>
+                   </div>
+               </div>
 
-    buttonEl.addEventListener('click', function() {
-        cardEl.classList.toggle('opened');
-    })
-</script>
+           </section>
+       </section>
+   </body>
 
 </html>
